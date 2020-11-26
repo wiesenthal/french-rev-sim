@@ -1,0 +1,66 @@
+Aaction	Flavor	Real Cost	Requirement (cost)	Reward	Roles Able	Major	Tactique	109
+Abolish Feudalism	"Serfs up!"	W: 3, A: 2, L: 1	W: 3, A: 3, L: 3	National Freedom + 2. Loyalty +1.Nobles Loyalty -1	Peasants	1	0	1
+Angry Mob			L: 2	Armaments + 2	Peasants		0	2
+Appoint General		A: 1, G: 2		Loyalty + 1.Armaments + 3	Committee		0	3
+Bank Loan		L: 1		Gold + 5. Doesn't use your action.	Any		1	1
+Banquet Hall		F: 6, G: 2		Loyalty + 2	Any		0	1
+Beg				Food + 3 or Gold + 2	Peasants		0	4
+Bribery		G: 6		Loyalty + 1. Assembly + 1	Any		0	2
+Build Factory		G:5, F: 4		Gold Per Turn + 2. (Removed from deck after use)	Any		0	2
+Build Farm		G: 3		Food Per Turn + 1. (Removed from deck after use)	Any		0	2
+Build Trading Post		G: 4		Gold Per Turn + 1. (Removed from deck after use)	Any		0	4
+Buy Food		G: 2		Food + 5	Any		0	5
+Buy Votes		G: 7		Assembly + 2	Any		0	1
+Buy Weapons		G: 1		Armaments + 1	Any		0	6
+Civil War	The enemy of my enemy is my enemy.	L: 2	W: 5	Turn order is determined by Armaments instead of Assembly.Assembly + 2.National Freedom +/- 1	Any	1	0	1
+Clergy Swear Allegiance	The Church? No, the STATE!	W: 3, G: 7	L: 3	Loyalty + 1.National Freedom +/- 2	Nobles	1	0	1
+Cloak and Dagger		W: 3		Lower loyalty and assembly of another class by 1	Any		1	1
+Committee of General Security	Someone needs to enfore the rules, after all.	W: 1, A: 1		Killing enemies of state now costs 1 Loyalty less	Committee	1	0	1
+Communism	Seize the means of production!	G: 4, F: 5	L: 4	Loyalty + 1. You can't lose or gain money. If National Freedom is less than 4, then Food Per Turn - 1	Any	1	0	1
+Constitution	"Liberté, égalité, fraternité"	W: 2, A: 2, L: 2	A: 4, L: 4	All National Freedom Gains are increased by 1.	Bourgeoisie	1	0	1
+Coup d'état		W: 3, L: 1, G: 1	W: 6, L: 3, G: 1	Gain Assembly Seats equal to your armaments (after cost).	Any		1	1
+Crop Rotation		G: 2, F: 2		Food Per Turn + 1. (Removed from deck after use)	Any		0	2
+Election Campaign		G: 3, L: 1		Take an assembly seat from another target player	Any		0	2
+Embezzle Money		L: 1		Gold + 4. Does not use an action.	Any		0	1
+Enlightenment	"We hold these truths to be self evident..."	A: 2, F: 4	A: 4, L: 4	National Freedom +1. All players can now take two actions Per Turn	Bourgeoisie	1	0	1
+Enter Reign Of Terror	"Terror is nothing more than justice, prompt, secure and inflexible."	W: 3	L: 4, A: 3, W: 3	Killing enemies of rebellion cost is halved	Committee	1	0	1
+Espionage		L: 1		Ignore class restrictions on one action.	Any		1	1
+Feast		F: 4		Loyalty + 1	Any		0	2
+Filibuster		A: 1	A: 4	Discard all available actions and replace them with new ones. Does not use an action.	Any		1	1
+Foreign Aid		L: 1, G: 1		Armaments + 2.Food + 2.	Any		0	2
+Guillotine Marie Antionette	Time to eat cake!	W: 2	W: 4, L: 3	Food + 5 (If executed by Committee, counts as 2 enemies killed). National Freedom + 1	Peasants, Bourgeoisie, Committee	1	0	1
+Guillotine Robespierre	"You can't make a Tomelette without breaking a few Greggs"	W: 4, L: 2, A: 1	A: 4	National Freedom +/- 2.Committee Loyalty - 2	Peasants, Bourgeoisie, Nobles	1	0	1
+Guillotine<br>King Louis XVI	"The dinosaur is having one last roar at the meteor before it wipes him out."	W: 2, L: 1	W: 4, L: 2, A: 4	Assembly + 2. Nobles Loyalty - 1. National Freedom +/- 2	Committee	1	0	1
+Habeas Corpus	"It is better to risk saving a guilty man than to condemn an innocent one"	A: 1, L: 1	L: 4, A: 5	National Freedom + 3	Bourgeousie	1	0	1
+Hire Spy		G: 4		Lower loyalty of another class by 1	Any		0	1
+Imperialism	"I came, I saw, I conquered"	W: 3, F: 3	L: 3	Gold and Food Per Turn + 1	Any	1	0	1
+Kill Enemy of Revolution		L:2, W: 2		1 Enemy Killed. Lower assembly of another player by 1.	Committee	0	0	6
+Knowledge is Power	"France is Bacon"		L: 3, A: 3	Gain + 1 Armaments for every Major Card you have (including this one).	Any	1	0	1
+Military Parade		W: 3	W: 5	Loyalty + 2	Any	0	0	2
+Militia		G: 1, F: 2	L: 3	Armaments + 2. Peasants ignore loyalty requirement	Peasants, Bourgeoisie, Committee		0	2
+Mitigate Action		A: 1		Put an action on the table into the discard pile	Any		1	1
+Mob Rule	Tyranny of the majority.	W: 5	L: 3	Assembly + 5. National Freedom - 1	Peasants	1	0	1
+Nepotism		L: 1, G: 2	L: 1	Assembly + 1.National Freedom - 1	Nobles		0	2
+Pamper People		G: 2, F: 2		Loyalty + 1	Any		0	5
+Parliamentary Review		G: 2	A: 2	Play a card from the discard pile (by paying it's cost).	Any		0	4
+Persuasive Speech			L: 4	Assembly + 1	Bourgeoise, Committee		0	3
+Pity Party				Loyalty + 1. Assembly + 1	Peasants		0	3
+Political Convention				Loyalty or Assembly + 1	Bourgeoisie		0	2
+Print Propaganda		G: 4, A: 1		Loyalty + 2	Any		0	3
+Protect Freedom		W: 1	A: 2	National Freedom + 1	Bourgeoise		0	3
+Publish Oeuvres de Robespierre	"The pen is mightier than the sword"	G: 4, F: 2		Loyalty + 1.Assembly + 1.Armaments + 1	Committee	1	0	1
+Raiding Party		W: 1		Gold + 3.Food + 1	Any		0	2
+Raise Arms		G: 2		Armaments + 2	Committee, Nobles		0	4
+Rally Support		G: 2, F: 3	L: 2	Loyalty or Assembly + 1.National Freedom +/- 1	Any		0	3
+Ransack		W: 2		Steal up to 3 food from a player.	Any	0	1	1
+Republican Calendar	100 Minutes per Hour, 10 Hours per Day, 100 Days per Year	L: 1	L: 3, A: 1	Nobles Loyalty - 1.National Freedom + 1	Bourgeoisie, Committee	1	0	1
+Seize Manor		W: 2	L: 2	Gold + 4.Food +4. Nobles Food - 2	Peasants, Bourgeoisie, Committee		0	2
+Separate Church and State	"One good schoolmaster is of more use than a hundred priests."	W: 3	L: 3, A: 3	National Freedom +2. Nobles lose an assembly seat	Peasants, Bourgeoisie, Committee	1	0	1
+Skirmish		W: 2		Target Class loses 2 weapons. (If in Civil War, they lose 4)	Any		1	1
+Wine and Dine		F: 5		Only costs 1 food if you have a farm built. Assembly + 1	Any			2
+Storm Bastille	Fight fire with fire.	G: 2, F: 2	W: 4, L: 3	Armaments + 2.Loyalty + 1.National Freedom +/- 1	Peasants, Bourgeoisie, Committee	1	0	1
+Tennis Court Oath	Location<br>Location<br> Location.	F: 3, G: 1	L: 3, A: 4	Halve the costs and requirements of <b>Constitution</b> and <b>Enlightenment</b>.National Freedom + 2	Bourgeoisie	1	0	1
+Tithe Peasants		A: 1		Gold + 6.Peasants Gold - 1	Nobles		0	2
+Veto		A: 1	A: 3, L: 3	Negate an action.No resources spent, but turn is lost.Card shuffled back in to library	Any		1	1
+Women's March on Versailles	"Men fight wars. Women win them."	W: 2, F: 2	W: 4, L: 3, F: 1	Loyalty + 2.Nobles Loyalty - 1.National Freedom + 1	Peasants, Bourgeoisie, Committee	1	0	1
+Backroom Deal		G: 4		Assembly + 1	Any			2
