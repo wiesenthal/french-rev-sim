@@ -203,6 +203,40 @@ class Peasants(Agent):
             self.feudalism_abolished = True
         return card
 
+class Bourgeoisie(Agent):
+    vc = {'nf': 12, 'a': 9, 'l': 7}  # victory conditions
+
+    def __init__(self, starting_weights):
+        super().__init__(starting_weights)
+        self.resources = {'w': 2, 'gpt': 1, 'fpt': 1, 'l': 2, 'g': 4, 'f': 3, 'a': 3, 'nf':  5}
+        self.role = 'b'
+        self.card_weights['enlightenment'] = 30
+        self.population = 1
+        self.enlightenment = False
+
+    def achieved_goal(self):
+        # 15 food, 10 assembly, abolish feudalis
+        return (int(self.resources['a'] >= Bourgeoisie.vc['a']) + int(
+            self.enlightenment and self.resources['l'] >= Bourgeoisie.vc['l']) + int(
+            self.resources['nf'] >= Bourgeoisie.vc['nf'])) >= 2
+
+    def heuristic(self, card):
+        temp_weights = self.weights.copy()
+
+        if self.resources['nf'] >= Bourgeoisie.vc['nf']:
+            temp_weights['nf'] = 0
+        if self.resources['a'] >= Bourgeoisie.vc['a'] + 1:
+            temp_weights['a'] = 0
+        if self.resources['l'] >= Bourgeoisie.vc['l']:
+            temp_weights['l'] = 0
+        return card.value(temp_weights) + self.card_weights[card.name]
+
+    def select(self, cards):
+        card = super().select(cards)
+        if card.name == 'enlightenment':
+            self.enlightenment = True
+        return card
+
 
 def simulate(agent, num_sims):
     total = 0
