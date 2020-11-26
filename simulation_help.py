@@ -87,6 +87,7 @@ def text_to_reward(text_reward):
 hard_cards = dict()
 hard_cards['imperialism'] = Card('imperialism', {'w': 3, 'f': 3}, {'l': 3}, {'gpt': 1, 'fpt': 1}, 1,
                                  ['n', 'b', 'c', 'a'], True)
+fake_majors = ['build factory', 'build trading post', 'build farm', 'crop rotation']
 
 
 def line_to_card(line):
@@ -99,13 +100,13 @@ def line_to_card(line):
     rt = line[4]
     who = line[5].lower()
     is_major = line[6]
-    num = line[8]
+    num = int(line[8])
 
     cost = text_to_cost(ct)
     reqs = text_to_cost(rq)
     reward = text_to_reward(rt)
 
-    is_major = is_major == '1'
+    is_major = is_major == '1' or name in fake_majors
 
     if 'any' in who:
         roles = ['p', 'b', 'c', 'n']
@@ -129,26 +130,12 @@ def read(filepath):
             if first:
                 first = False
                 continue
-            cards.append(line_to_card(line))
+            c = line_to_card(line)
+            for i in range(c.count):
+                cards.append(c)
     return cards
 
 
 # cards = read('cards.tsv')
 # cards = sorted(cards, key=lambda c: c.value(starting_weights))
 
-
-def search():
-    i = ''
-    while i != 'q':
-        i = input("pick a card: ")
-        found = None
-        for c in cards:
-            if c.name.lower() == i:
-                found = c
-        if not found:
-            print('not found')
-        else:
-            print(found.name)
-            print('value :', found.value(starting_weights))
-            print('cost :', found.total_cost(starting_weights))
-            print('reward :', found.results)

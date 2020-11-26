@@ -4,7 +4,7 @@ Angry Mob			L: 2	Armaments + 2	Peasants		0	2
 Appoint General		A: 1, G: 2		Loyalty + 1.Armaments + 3	Committee		0	3
 Bank Loan		gpt: 1		Gold + 5. Doesn't use your action.	Any		1	1
 Banquet Hall		F: 6, G: 2		Loyalty + 2	Any		0	1
-Beg				Food + 3 or Gold + 2	Peasants		0	4
+Beg				Gold + 3 or Food + 3	Peasants		0	4
 Bribery		G: 6		Loyalty + 1. Assembly + 1	Any		0	2
 Build Factory		G:5, F: 4		Gold Per Turn + 2. (Removed from deck after use)	Any		0	2
 Build Farm		G: 3		Food Per Turn + 1. (Removed from deck after use)	Any		0	2
@@ -62,5 +62,5 @@ Storm Bastille	Fight fire with fire.	G: 2, F: 2	W: 4, L: 3	Armaments + 2.Loyalty
 Tennis Court Oath	Location<br>Location<br> Location.	F: 3, G: 1	L: 3, A: 4	Halve the costs and requirements of <b>Constitution</b> and <b>Enlightenment</b>.National Freedom + 2	Bourgeoisie	1	0	1
 Tithe Peasants		A: 1		Gold + 6.Peasants Gold - 1	Nobles		0	2
 Veto		A: 1	A: 3, L: 3	Negate an action.No resources spent, but turn is lost.Card shuffled back in to library	Any		1	1
-Women's March on Versailles	"Men fight wars. Women win them."	W: 2, F: 2	W: 4, L: 3, F: 1	Loyalty + 2.Nobles Loyalty - 1.National Freedom + 1	Peasants, Bourgeoisie, Committee	1	0	1
+Women's March on Versailles	"Men fight wars. Women win them."	W: 2, F: 2	L: 3, W: 4	Loyalty + 2.Nobles Loyalty - 1.National Freedom + 1	Peasants, Bourgeoisie, Committee	1	0	1
 Backroom Deal		G: 4		Assembly + 1	Any			2

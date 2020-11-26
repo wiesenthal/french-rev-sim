@@ -85,9 +85,9 @@ def normalize(weights, val):
     return new_weights
 
 
-class_tested = simulation.Bourgeoisie
+class_tested = simulation.Peasants
 
-num_agents = 500
+num_agents = 150
 num_generations = 150
 first_agents = [class_tested(random_weights()) for i in range(num_agents)]
 gen = Generation(first_agents, .5, 0.75)
@@ -127,10 +127,10 @@ for k, v in sorted(rates, key=lambda x: x[1]):
     print(f'{k}: {round(v,4)*100}%')
 
 # win conditions
-for a in gen.agents:
-    r = a.resources
-    print(r)
-    # print(f'gold: {r["g"]}, weapons: {r["w"]}, nf: {r["nf"]}, assembly: {r["a"]}')
+# for a in gen.agents:
+#     r = a.resources
+#     print(r)
+#     # print(f'gold: {r["g"]}, weapons: {r["w"]}, nf: {r["nf"]}, assembly: {r["a"]}')
 
 # print()
 # print("BEST")
