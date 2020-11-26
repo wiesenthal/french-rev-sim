@@ -51,7 +51,7 @@ Protect Freedom		W: 1	A: 2	National Freedom + 1	Bourgeoise		0	3
 Publish Oeuvres de Robespierre	"The pen is mightier than the sword"	G: 4, F: 2		Loyalty + 1.Assembly + 1.Armaments + 1	Committee	1	0	1
 Raiding Party		W: 1		Gold + 3.Food + 1	Any		0	2
 Raise Arms		G: 2		Armaments + 2	Committee, Nobles		0	4
-Rally Support		G: 2, F: 3	L: 2	Loyalty or Assembly + 1.National Freedom +/- 1	Any		0	3
+Rally Support		G: 4, F: 3	L: 2	Loyalty or Assembly + 1.National Freedom +/- 1	Any		0	3
 Ransack		W: 2		Steal up to 3 food from a player.	Any	0	1	1
 Republican Calendar	100 Minutes per Hour, 10 Hours per Day, 100 Days per Year	L: 1	L: 3, A: 1	Nobles Loyalty - 1.National Freedom + 1	Bourgeoisie, Committee	1	0	1
 Seize Manor		W: 2	L: 2	Gold + 4.Food +4. Nobles Food - 2	Peasants, Bourgeoisie, Committee		0	2

@@ -42,15 +42,15 @@ class Agent:
 
         card = self.select(cards + free_actions)
 
-        if card.is_major:
-            cards.remove(card)
-
         # update selection percent
         if self.generation > gen_start:
             selected_cards[card.name] += 1
             for c1 in cards + free_actions:
                 if self.able(c1) and self.can_afford(c1):
                     seen_cards[c1.name] += 1
+
+        if card.is_major:
+            cards.remove(card)
 
         for k, v in card.costs.items():
             self.resources[k] -= v
@@ -204,7 +204,7 @@ class Peasants(Agent):
         return card
 
 class Bourgeoisie(Agent):
-    vc = {'nf': 12, 'a': 9, 'l': 7}  # victory conditions
+    vc = {'nf': 13, 'a': 9, 'l': 7}  # victory conditions
 
     def __init__(self, starting_weights):
         super().__init__(starting_weights)
@@ -238,11 +238,11 @@ class Bourgeoisie(Agent):
         return card
 
 
-def simulate(agent, num_sims):
-    total = 0
-    card_pile = read('cards.tsv')
-    for j in range(num_sims):
-        p = agent.duplicate()
-        result = play_game(p, card_pile)
-        total += result.num_turns
-    return float(total / num_sims)
+# def simulate(agent, num_sims):
+#     total = 0
+#     card_pile = read('cards.tsv')
+#     for j in range(num_sims):
+#         p = agent.duplicate()
+#         result = play_game(p, card_pile)
+#         total += result.num_turns
+#     return float(total / num_sims)

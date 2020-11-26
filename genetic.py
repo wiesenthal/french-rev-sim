@@ -85,32 +85,35 @@ def normalize(weights, val):
     return new_weights
 
 
-num_agents = 250
+class_tested = simulation.Bourgeoisie
+
+num_agents = 500
 num_generations = 150
-first_agents = [simulation.Nobles(random_weights()) for i in range(num_agents)]
-gen = Generation(first_agents, 0.3, 0.8)
+first_agents = [class_tested(random_weights()) for i in range(num_agents)]
+gen = Generation(first_agents, .5, 0.75)
 for i in range(num_generations):
     print(
         f'Generation #{gen.gen_number} best: {gen.best.num_turns}, median: {gen.median.num_turns}, worst: {gen.worst.num_turns}')
     gen = gen.next_both()
 print(normalize(gen.median.weights, gen.median.weights['action']))
 
-simulation.seen_cards = simulation.defaultdict(int)
-simulation.selected_cards = simulation.defaultdict(int)
+# simulation.seen_cards = simulation.defaultdict(int)
+# simulation.selected_cards = simulation.defaultdict(int)
 
-# card weight training
-new_agents = []
-for i in range(num_agents):
-    new_agents.append(gen.best.duplicate())
-cardgen = Generation(new_agents, 0.3, 0.8)
-for i in range(num_generations):
-    print(
-        f'Generation #{cardgen.gen_number} best: {cardgen.best.num_turns}, median: {cardgen.median.num_turns}, worst: {cardgen.worst.num_turns}')
-    cardgen = cardgen.next_c()
-print(normalize(cardgen.median.weights, gen.median.weights['action']))
+# # card weight training
+# new_agents = []
+# for i in range(num_agents):
+#     new_agents.append(gen.best.duplicate())
+# cardgen = Generation(new_agents, 0.3, 0.8)
+# for i in range(num_generations):
+#     print(
+#         f'Generation #{cardgen.gen_number} best: {cardgen.best.num_turns}, median: {cardgen.median.num_turns}, worst: {cardgen.worst.num_turns}')
+#     cardgen = cardgen.next_c()
+# print(normalize(cardgen.median.weights, gen.median.weights['action']))
 
 # print card weights
-cw = cardgen.median.card_weights
+cw = gen.median.card_weights
+cw = normalize(cw, gen.median.weights['action'])
 cwt = [(k, v) for k, v in cw.items()]
 cwt.sort(key=lambda x: x[1])
 print(cwt)
@@ -124,9 +127,10 @@ for k, v in sorted(rates, key=lambda x: x[1]):
     print(f'{k}: {round(v,4)*100}%')
 
 # win conditions
-for a in cardgen.agents:
+for a in gen.agents:
     r = a.resources
-    print(f'gold: {r["g"]}, weapons: {r["w"]}, nf: {r["nf"]}, assembly: {r["a"]}')
+    print(r)
+    # print(f'gold: {r["g"]}, weapons: {r["w"]}, nf: {r["nf"]}, assembly: {r["a"]}')
 
 # print()
 # print("BEST")
