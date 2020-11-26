@@ -6,13 +6,16 @@ starting_weights = {'g': 1.0, 'f': 0.66, 'l': 5.0, 'a': 6.0, 'nf': 2.75, 'gpt': 
 
 
 class Card:
-    def __init__(self, name, costs, requirements, results, num):  # cost and results are dictionaries
+    def __init__(self, name, costs, requirements, results, num, roles,
+                 is_major=False):  # cost and results are dictionaries
         self.name = name
         self.costs = costs
         self.requirements = requirements
         self.results = results
         self.count = num
-        self.roles = []
+        self.roles = roles
+
+        self.is_major = is_major
 
     def value(self, weights):
         return round(self.total_reward(weights) - self.total_cost(weights), 3)
@@ -80,25 +83,40 @@ def text_to_reward(text_reward):
     return rdict
 
 
+# hard coded cards
+hard_cards = dict()
+hard_cards['imperialism'] = Card('imperialism', {'w': 3, 'f': 3}, {'l': 3}, {'gpt': 1, 'fpt': 1}, 1,
+                                 ['n', 'b', 'c', 'a'], True)
+
+
 def line_to_card(line):
     line = line.split('\t')
     name = line[0].lower()
+    if name in hard_cards.keys():
+        return hard_cards[name]
     ct = line[2]
     rq = line[3]
     rt = line[4]
     who = line[5].lower()
+    is_major = line[6]
     num = line[8]
+
     cost = text_to_cost(ct)
     reqs = text_to_cost(rq)
     reward = text_to_reward(rt)
-    c = Card(name, cost, reqs, reward, num)
+
+    is_major = is_major == '1'
+
     if 'any' in who:
-        c.roles = ['p', 'b', 'c', 'n']
+        roles = ['p', 'b', 'c', 'n']
     else:
         who = who.split(',')
-        c.roles = []
+        roles = []
         for i in who:
-            c.roles.append(i.strip()[0])
+            roles.append(i.strip()[0])
+
+    c = Card(name, cost, reqs, reward, num, roles, is_major)
+
     return c
 
 
@@ -134,4 +152,3 @@ def search():
             print('value :', found.value(starting_weights))
             print('cost :', found.total_cost(starting_weights))
             print('reward :', found.results)
-

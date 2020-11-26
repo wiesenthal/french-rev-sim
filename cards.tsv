@@ -2,7 +2,7 @@ Aaction	Flavor	Real Cost	Requirement (cost)	Reward	Roles Able	Major	Tactique	109
 Abolish Feudalism	"Serfs up!"	W: 3, A: 2, L: 1	W: 3, A: 3, L: 3	National Freedom + 2. Loyalty +1.Nobles Loyalty -1	Peasants	1	0	1
 Angry Mob			L: 2	Armaments + 2	Peasants		0	2
 Appoint General		A: 1, G: 2		Loyalty + 1.Armaments + 3	Committee		0	3
-Bank Loan		L: 1		Gold + 5. Doesn't use your action.	Any		1	1
+Bank Loan		gpt: 1		Gold + 5. Doesn't use your action.	Any		1	1
 Banquet Hall		F: 6, G: 2		Loyalty + 2	Any		0	1
 Beg				Food + 3 or Gold + 2	Peasants		0	4
 Bribery		G: 6		Loyalty + 1. Assembly + 1	Any		0	2

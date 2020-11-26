@@ -6,16 +6,15 @@ from collections import defaultdict
 with open('card_list.txt', 'r') as f:
     card_list = [l.strip().lower() for l in f.readlines()]
 
-one_food = Card('farm', {}, {}, {'f': 1}, 0)
-one_food.roles = ['n', 'b', 'p', 'c']
-one_gold = Card('sell furs', {}, {}, {'g': 1}, 0)
-one_gold.roles = ['n', 'b', 'p', 'c']
+one_food = Card('farm', {}, {}, {'f': 1}, 0, ['n', 'b', 'p', 'c'])
+one_gold = Card('sell furs', {}, {}, {'g': 1}, 0, ['n', 'b', 'p', 'c'])
 free_actions = [one_gold, one_food]
 
 selected_cards = defaultdict(int)
 seen_cards = defaultdict(int)
 
 gen_start = 100
+
 
 class Agent:
 
@@ -42,6 +41,9 @@ class Agent:
         self.resources['f'] += self.resources['fpt']
 
         card = self.select(cards + free_actions)
+
+        if card.is_major:
+            cards.remove(card)
 
         # update selection percent
         if self.generation > gen_start:
@@ -116,8 +118,8 @@ class Agent:
                 discard_pile = []
                 shuffle(draw_pile)
             cards = [draw_pile.pop() for j in range(9)]
-            discard_pile.extend(cards)
             win = self.do_turn(cards, trace)
+            discard_pile.extend(cards)
             i += 1
             if i > max_turns:
                 break
@@ -168,6 +170,38 @@ class Nobles(Agent):
         if self.resources['a'] >= Nobles.vc['a'] + 1:
             temp_weights['a'] = 0
         return card.value(temp_weights) + self.card_weights[card.name]
+
+
+class Peasants(Agent):
+    vc = {'f': 15, 'a': 10}  # victory conditions
+
+    def __init__(self, starting_weights):
+        super().__init__(starting_weights)
+        self.resources = {'w': 3, 'gpt': 1, 'fpt': 1, 'l': 2, 'g': 1, 'f': 3, 'a': 1, 'nf':  5}
+        self.role = 'p'
+        self.card_weights['abolish feudalism'] = 30
+        self.population = 3
+        self.feudalism_abolished = False
+
+    def achieved_goal(self):
+        # 15 food, 10 assembly, abolish feudalis
+        return (int(self.feudalism_abolished) + int(
+            self.resources['f'] >= Peasants.vc['f']) + int(
+            self.resources['a'] >= Peasants.vc['a'])) >= 2
+
+    def heuristic(self, card):
+        temp_weights = self.weights.copy()
+        if self.resources['f'] >= Peasants.vc['f'] + 3:
+            temp_weights['g'] = 0
+        if self.resources['a'] >= Peasants.vc['a'] + 1:
+            temp_weights['a'] = 0
+        return card.value(temp_weights) + self.card_weights[card.name]
+
+    def select(self, cards):
+        card = super().select(cards)
+        if card.name == 'abolish feudalism':
+            self.feudalism_abolished = True
+        return card
 
 
 def simulate(agent, num_sims):
