@@ -1,0 +1,77 @@
+training Bourgeoisie
+Generation #0 best: 14, median: 1001, worst: 1001
+Generation #10 best: 17, median: 26, worst: 2002
+Generation #20 best: 15, median: 25, worst: 49
+Generation #30 best: 14, median: 24, worst: 46
+Generation #40 best: 16, median: 24, worst: 40
+Generation #50 best: 15, median: 24, worst: 46
+Generation #60 best: 13, median: 24, worst: 40
+Generation #70 best: 16, median: 23, worst: 37
+Generation #80 best: 14, median: 23, worst: 37
+Generation #90 best: 15, median: 22, worst: 34
+Generation #100 best: 13, median: 23, worst: 37
+Generation #110 best: 15, median: 22, worst: 33
+Generation #120 best: 14, median: 24, worst: 40
+Generation #130 best: 15, median: 23, worst: 34
+Generation #140 best: 15, median: 22, worst: 34
+{'g': 0.0932502760550791, 'f': 0.11837748231796541, 'l': 0.7066945962949013, 'a': 0.743455046226503, 'nf': 1.6988646588212695, 'gpt': 1.2129564314997696, 'fpt': 0.28837451199325714, 'w': 0.14796315016985567, 'action': 1.0}
+Number of turns to win for best: 14, median: 22, worst: 33
+
+training Committee
+Generation #151 best: 27, median: 1001, worst: 1001
+Generation #161 best: 24, median: 53, worst: 2002
+Generation #171 best: 22, median: 47, worst: 316
+Generation #181 best: 22, median: 47, worst: 85
+Generation #191 best: 20, median: 42, worst: 79
+Generation #201 best: 18, median: 36, worst: 79
+Generation #211 best: 17, median: 32, worst: 58
+Generation #221 best: 15, median: 32, worst: 57
+Generation #231 best: 14, median: 32, worst: 51
+Generation #241 best: 14, median: 31, worst: 50
+Generation #251 best: 13, median: 31, worst: 61
+Generation #261 best: 14, median: 30, worst: 57
+Generation #271 best: 17, median: 29, worst: 57
+Generation #281 best: 13, median: 31, worst: 58
+Generation #291 best: 19, median: 30, worst: 68
+{'g': 0.032340491564416, 'f': -0.015561039013962125, 'l': 0.061573634566617554, 'a': 0.8821756672128398, 'nf': 0.28998606844598196, 'gpt': 0.609669575833818, 'fpt': 0.31907316707566297, 'w': 1.1486509621304828, 'action': 1.0}
+Number of turns to win for best: 18, median: 30, worst: 50
+
+training Peasants
+Generation #302 best: 20, median: 254, worst: 1001
+Generation #312 best: 12, median: 36, worst: 86
+Generation #322 best: 12, median: 26, worst: 71
+Generation #332 best: 11, median: 25, worst: 54
+Generation #342 best: 11, median: 25, worst: 43
+Generation #352 best: 13, median: 25, worst: 48
+Generation #362 best: 8, median: 24, worst: 43
+Generation #372 best: 12, median: 24, worst: 41
+Generation #382 best: 12, median: 23, worst: 45
+Generation #392 best: 10, median: 24, worst: 41
+Generation #402 best: 10, median: 23, worst: 48
+Generation #412 best: 11, median: 23, worst: 49
+Generation #422 best: 10, median: 23, worst: 40
+Generation #432 best: 12, median: 23, worst: 42
+Generation #442 best: 12, median: 24, worst: 44
+{'g': 0.07529211699608923, 'f': 0.37086943953434454, 'l': 0.7806272406180649, 'a': 1.1223538497325791, 'nf': 0.9735739885539206, 'gpt': 1.4099492384305283, 'fpt': 1.4111721477522714, 'w': 0.5989390011149847, 'action': 1.0}
+Number of turns to win for best: 9, median: 23, worst: 44
+
+training Nobles
+Generation #453 best: 30, median: 1001, worst: 1001
+Generation #463 best: 25, median: 39, worst: 68
+Generation #473 best: 23, median: 36, worst: 62
+Generation #483 best: 26, median: 36, worst: 59
+Generation #493 best: 23, median: 35, worst: 54
+Generation #503 best: 23, median: 35, worst: 66
+Generation #513 best: 22, median: 34, worst: 53
+Generation #523 best: 23, median: 34, worst: 58
+Generation #533 best: 23, median: 34, worst: 59
+Generation #543 best: 22, median: 33, worst: 58
+Generation #553 best: 23, median: 33, worst: 61
+Generation #563 best: 22, median: 33, worst: 58
+Generation #573 best: 24, median: 34, worst: 63
+Generation #583 best: 22, median: 33, worst: 61
+Generation #593 best: 23, median: 33, worst: 58
+{'g': 1.1669599224789773, 'f': 0.04613588496885206, 'l': 0.12552789439576587, 'a': 0.8080041102144364, 'nf': 0.5840293667089728, 'gpt': 0.9252012852425708, 'fpt': 0.1819427349749771, 'w': 0.8542713194180699, 'action': 1.0}
+Number of turns to win for best: 25, median: 33, worst: 56
+
+dict_items([(<class 'simulation.Bourgeoisie'>, 96), (<class 'simulation.Peasants'>, 5), (<class 'simulation.Nobles'>, 899)])

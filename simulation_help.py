@@ -5,6 +5,7 @@ starting_weights = {'g': 1.0, 'f': 0.66, 'l': 5.0, 'a': 6.0, 'nf': 2.75, 'gpt': 
                     'action': 1.7}
 
 
+# mostly dealing with the cards in this file
 class Card:
     def __init__(self, name, costs, requirements, results, num, roles,
                  is_major=False):  # cost and results are dictionaries
@@ -18,6 +19,7 @@ class Card:
         self.is_major = is_major
 
     def value(self, weights):
+        # get the value of this card based on weights
         return round(self.total_reward(weights) - self.total_cost(weights), 3)
 
     def total_cost(self, weights):
@@ -35,6 +37,7 @@ class Card:
 
 
 def text_to_cost(cost_text):
+    # takes in text from my csv file of cards turns it into a cost dictionary
     if cost_text == '':
         return dict()
     cost = cost_text.split(',')
@@ -49,6 +52,7 @@ def text_to_cost(cost_text):
 
 
 def text_to_reward(text_reward):
+    # takes in text from my csv file of cards turns it into a reward dictionary
     reward_list = ['national freedom', 'gold per turn', 'food per turn', 'loyalty', 'armaments', 'gold', 'food',
                    'assembly']
     numbers = [str(i) for i in range(1, 10)]
@@ -91,6 +95,7 @@ fake_majors = ['build factory', 'build trading post', 'build farm', 'crop rotati
 
 
 def line_to_card(line):
+    #gets one line and turns it into a card
     line = line.split('\t')
     name = line[0].lower()
     if name in hard_cards.keys():
@@ -122,6 +127,8 @@ def line_to_card(line):
 
 
 def read(filepath):
+    # reads a whole file and turns it into cards.
+    # only to be used with cards.csv, a file generated from an excel sheet of all the cards
     cards = []
     with open(filepath, 'r') as f:
         lines = f.readlines()
@@ -134,8 +141,3 @@ def read(filepath):
             for i in range(c.count):
                 cards.append(c)
     return cards
-
-
-# cards = read('cards.tsv')
-# cards = sorted(cards, key=lambda c: c.value(starting_weights))
-

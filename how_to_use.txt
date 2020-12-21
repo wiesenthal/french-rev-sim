@@ -1,0 +1,28 @@
+How to Run my Board Game Simulation:
+
+Run the file "run_genetic.py"
+
+python3 run_genetic.py
+(with optional arguments listed below)
+
+
+Use 	-b,	-c,	-n,	-p	 as arguments for training Bourgiousie, Committee of Public Safety, Nobles, and Peasants respectively
+Training agents without any other arguments will be useless. Add an option beginning with a hyphen to see various resulting statistics
+Optional arguments:
+	"-resource_weights": for each trained agent at the end, print the weights that it has for each resource after training (very useful)
+		Note: g is gold, f is food, w is weapons (sometimes called armaments), l is loyalty, a is assemby seats, nf is national freedom
+	"-card_weights": for each trained agent at the end, print the weights that it has for each card after training (long)
+	"-end_resources": for each final generation, print the final resource counts for each agent in the generation. Useful for finding how they won.
+	"-card_rates": print the percentage that each card was picked any time someone had the ability to buy it. (including its costs) Useful for finding cards that are over or under powered.(long)
+	"-full_game": must enable all four agents for this option to work. Carries out 1000 full games with each agent taking turns in order and prints out win rates. After, it prints one run through of the game turn by turn.
+		Note: The majority winner changes a lot depending on how well each agent learns the design space. Sometimes one class will win every time, but that class can be different on a different run of the sim.
+
+The hyperparameters of the genetic algorithm can also be adjusted, but these have reasonable default values.
+Hyperparameters are specified with the format [paramter]=[value], ex. mutation_rate=0.1
+	"num_agents": default=500. Specifies number of agents in each generation
+	"num_generations": default=200. Specifies number of generations per training of each role.
+	"mutation_rate": default=0.5. Specifies how much the weights mutate each generation.
+	"survival_rate": default=0.75. Specifies what proportion of the population of each generation survives each iteration.
+	"annealing_rate": default=0.99. Specifies the annealing rate of mutation.
+
+If no arguments are used, all four agents will be trained, then a simulation of a full game will be carried out.

@@ -1,4 +1,5 @@
 Abolish Feudalism
+Absolute Monarchy
 Angry Mob
 Appoint General
 Bank Loan
@@ -17,7 +18,7 @@ Cloak and Dagger
 Committee of General Security
 Communism
 Constitution
-Coup d'état
+Coup d'etat
 Crop Rotation
 Election Campaign
 Embezzle Money
